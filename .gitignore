@@ -12,16 +12,4 @@ pids
 
 # Dependency directory
 node_modules
-
-# Users Environment Variables
-.lock-wscript
-
-*.sublime*
-.idea
-
 compare/bower_components/**/.*
-
-# bitmaps_test
-# bitmaps_reference
-compare/config.json
-capture/config.json
