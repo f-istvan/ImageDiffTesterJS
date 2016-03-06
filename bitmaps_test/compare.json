@@ -1,0 +1,151 @@
+{
+  "compareConfig": {
+    "testPairs": [
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_0_header_0_phone.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_0_header_0_phone.png",
+        "selector": "header",
+        "fileName": "0_0_header_0_phone.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_1_main_0_phone.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_1_main_0_phone.png",
+        "selector": "main",
+        "fileName": "0_1_main_0_phone.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_2_bodybs-docs-featurettenth-of-type1_0_phone.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_2_bodybs-docs-featurettenth-of-type1_0_phone.png",
+        "selector": "body .bs-docs-featurette:nth-of-type(1)",
+        "fileName": "0_2_bodybs-docs-featurettenth-of-type1_0_phone.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_3_bodybs-docs-featurettenth-of-type2_0_phone.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_3_bodybs-docs-featurettenth-of-type2_0_phone.png",
+        "selector": "body .bs-docs-featurette:nth-of-type(2)",
+        "fileName": "0_3_bodybs-docs-featurettenth-of-type2_0_phone.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_4_footer_0_phone.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_4_footer_0_phone.png",
+        "selector": "footer",
+        "fileName": "0_4_footer_0_phone.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_5_body_0_phone.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_5_body_0_phone.png",
+        "selector": "body",
+        "fileName": "0_5_body_0_phone.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_0_header_1_tablet_v.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_0_header_1_tablet_v.png",
+        "selector": "header",
+        "fileName": "0_0_header_1_tablet_v.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_1_main_1_tablet_v.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_1_main_1_tablet_v.png",
+        "selector": "main",
+        "fileName": "0_1_main_1_tablet_v.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_2_bodybs-docs-featurettenth-of-type1_1_tablet_v.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_2_bodybs-docs-featurettenth-of-type1_1_tablet_v.png",
+        "selector": "body .bs-docs-featurette:nth-of-type(1)",
+        "fileName": "0_2_bodybs-docs-featurettenth-of-type1_1_tablet_v.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_3_bodybs-docs-featurettenth-of-type2_1_tablet_v.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_3_bodybs-docs-featurettenth-of-type2_1_tablet_v.png",
+        "selector": "body .bs-docs-featurette:nth-of-type(2)",
+        "fileName": "0_3_bodybs-docs-featurettenth-of-type2_1_tablet_v.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_4_footer_1_tablet_v.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_4_footer_1_tablet_v.png",
+        "selector": "footer",
+        "fileName": "0_4_footer_1_tablet_v.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_5_body_1_tablet_v.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_5_body_1_tablet_v.png",
+        "selector": "body",
+        "fileName": "0_5_body_1_tablet_v.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_0_header_2_tablet_h.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_0_header_2_tablet_h.png",
+        "selector": "header",
+        "fileName": "0_0_header_2_tablet_h.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_1_main_2_tablet_h.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_1_main_2_tablet_h.png",
+        "selector": "main",
+        "fileName": "0_1_main_2_tablet_h.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_2_bodybs-docs-featurettenth-of-type1_2_tablet_h.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_2_bodybs-docs-featurettenth-of-type1_2_tablet_h.png",
+        "selector": "body .bs-docs-featurette:nth-of-type(1)",
+        "fileName": "0_2_bodybs-docs-featurettenth-of-type1_2_tablet_h.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_3_bodybs-docs-featurettenth-of-type2_2_tablet_h.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_3_bodybs-docs-featurettenth-of-type2_2_tablet_h.png",
+        "selector": "body .bs-docs-featurette:nth-of-type(2)",
+        "fileName": "0_3_bodybs-docs-featurettenth-of-type2_2_tablet_h.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_4_footer_2_tablet_h.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_4_footer_2_tablet_h.png",
+        "selector": "footer",
+        "fileName": "0_4_footer_2_tablet_h.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      },
+      {
+        "reference": "../../backstop_data/bitmaps_reference/0_5_body_2_tablet_h.png",
+        "test": "../../backstop_data/bitmaps_test/20160306-121635/0_5_body_2_tablet_h.png",
+        "selector": "body",
+        "fileName": "0_5_body_2_tablet_h.png",
+        "label": "My Homepage",
+        "misMatchThreshold": 0.1
+      }
+    ]
+  },
+  "lastConfigHash": "9b46e53b4489b1ca3735ff5aece81b6a5b95c8fe"
+}

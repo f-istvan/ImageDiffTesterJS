@@ -4,10 +4,12 @@ var checksum = require('checksum');
 var fsx = require('fs-extra');
 var updateCompareConfigs = require('../util/updateCompareConfig');
 
+// This will update compare/config
+
 //BLESS THE CURRENT CAPTURE CONFIG
 gulp.task('bless',function() {
-  var config = fsx.readFileSync(paths.activeCaptureConfigPath, 'utf8');
-  updateCompareConfigs(function(compareConfig) {
+  	var config = fsx.readFileSync(paths.activeCaptureConfigPath, 'utf8');
+  	updateCompareConfigs(function(compareConfig) {
       compareConfig.lastConfigHash = checksum(config);
   });
 });
