@@ -70,25 +70,28 @@ compareApp.controller('MainCtrl', function ($scope, $route, $routeParams, $q, $h
 
       })
       .error(function(data, status) {
-        console.log('config file operation failed '+status);
+        console.log('config file operation failed ' + status);
       });
   };
 
 
 
   //LOOPS THROUGH TEST PAIR CONFIG AND CALLS compareTestPair(testPair) ON EACH ONE
-  $scope.compareTestPairs = function compareTestPairs(testPairs){
+  $scope.compareTestPairs = function compareTestPairs(testPairs) {
     var startTs = new Date();
+    var maxlLimitAsyncOperationsAtATime = 1;
 
-    async.eachLimit(testPairs ,1 ,firstFunc ,secondFunc);
+    async.eachLimit(testPairs, maxlLimitAsyncOperationsAtATime, firstFunc, secondFunc);
 
-    function firstFunc(testPair, cb) {
-      $scope.compareTestPair(testPair, function(o){
-        if(o.passed)$scope.passedCount++;
+    function firstFunc(testPair, callbackFormAsyncJS) {
+      $scope.compareTestPair(testPair, function(o) {
+        if (o.passed) {
+          $scope.passedCount++;
+        }
         $scope.testPairsCompleted++;
         $scope.testDuration = (new Date()-startTs);
         $scope.$digest();
-        cb();
+        callbackFormAsyncJS(); // must be called
       });
     }
 
@@ -102,8 +105,6 @@ compareApp.controller('MainCtrl', function ($scope, $route, $routeParams, $q, $h
     }
 
   };
-
-
 
   //TEST AN INDIVIDUAL testPair OBJECT.  UPDATES THE OBJECT WITH RESULTS AND THEN RETURNS THE OBJECT WITH THE CALLBACK
   $scope.compareTestPair = function compareTestPair(testPair, cb) {
