@@ -45,13 +45,14 @@ h2>.stat{white-space: nowrap;margin-right: 2em;display: inline-block;}
 .detailReport .indicator{display: block;}
 .indicator{display: inline-block;font-style: italic;font-weight: 100;color: #999;}
 
-.circle{
+.circle {
     padding: 3px;
     border-radius: 2em;
     color: white;
     width: 1.7em;
     display: inline-block;
     text-align: center;
+    margin: 0px 20px 0px 5px;
 }
 
 .dot{
