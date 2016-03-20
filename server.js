@@ -1,12 +1,11 @@
 var express = require('express'),
     app     = express();
 
-var rootDir = __dirname;
 var port = 3001;
 
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.static(rootDir));
+require('./routes')(app);
+
+app.use(express.static(__dirname));
 app.listen(port);
 
 console.log('Listening on localhost :' + port);
