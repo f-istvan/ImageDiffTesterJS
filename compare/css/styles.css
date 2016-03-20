@@ -42,6 +42,10 @@ th {
   margin-bottom: 20px;
 }
 
+.control-label {
+  padding-right: 10px;
+}
+
 .flex-container {
   display: flex;
   margin-bottom: 10px;

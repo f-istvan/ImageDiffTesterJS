@@ -25,20 +25,6 @@ compareApp.controller('MainCtrl', function ($scope, $route, $http) {
   $scope.detailFilterOptions = ['failed','passed','all','none'];
   $scope.statusFilter = 'none';
 
-  var testPair = function (a,b,c,o) {
-    console.log(a);
-    this.a = { src:a || '', srcClass: 'reference' },
-    this.b = { src:b || '', srcClass: 'test' },
-    this.c = { src:c || '', srcClass: 'diff' },
-    this.report = null;
-    this.processing = true;
-    this.passed = false;
-    this.meta = o;
-    this.meta.misMatchThreshold = 
-      (o && o.misMatchThreshold && o.misMatchThreshold >= 0)
-      ? o.misMatchThreshold : defaultMismatchThreshold;
-  };
-
   $scope.displayOnStatusFilter = function (testPair) {
     var show = false;
     if ($scope.statusFilter == 'all') {
@@ -56,19 +42,12 @@ compareApp.controller('MainCtrl', function ($scope, $route, $http) {
   });
 
   $scope.runFileConfig = function() {
-    $http.get('../getTestData')
-      .success(function (data, status) {
-        console.log(data);
-        data.testPairs.forEach(function (o, i, a){
-          $scope.testPairs.push(
-            new testPair('../'+o.reference, '../'+o.test, null, o)
-          );
-        });
-        $scope.compareTestPairs($scope.testPairs);
-      })
-      .error(function (data, status) {
-        console.log('Config operation failed ' + status);
+    $http.get('../getTestData').success(function (testPairs) {
+      testPairs.forEach(function (tp) {
+        $scope.testPairs.push(tp);
       });
+      $scope.compareTestPairs($scope.testPairs);
+    });
   };
 
   $scope.compareTestPairs = function compareTestPairs(testPairs) {
@@ -109,11 +88,11 @@ compareApp.controller('MainCtrl', function ($scope, $route, $http) {
   $scope.compareTestPair = function compareTestPair(testPair, cb) {
     testPair.processing = true;
 
-    var diff = resemble(testPair.a.src).compareTo(testPair.b.src).onComplete(function(diffData){
+    var diff = resemble(testPair.referenceSrc.src).compareTo(testPair.testSrc.src).onComplete(function(diffData){
       testPair.report = JSON.stringify(diffData,null,2);
-      testPair.c.src = diffData.getImageDataUrl();
+      testPair.diffSrc.src = diffData.getImageDataUrl();
       testPair.processing = false;
-      testPair.passed = (diffData.isSameDimensions && diffData.misMatchPercentage < testPair.meta.misMatchThreshold);
+      testPair.passed = (diffData.isSameDimensions && diffData.misMatchPercentage < testPair.misMatchThreshold);
       if (cb) cb(testPair);
     });
   };

@@ -63,7 +63,7 @@
           </td>
           
           <td> 
-            <span class="fileName">{{ thisTestPair.meta.fileName }}</span>
+            <span class="fileName">{{ thisTestPair.fileName }}</span>
           </td>
         </tr>
       </table>
@@ -72,7 +72,7 @@
     <div class="detailReport">
 
       <div class="filterGroup form-group">
-        <label for="statusFilter" class="control-label">status filter</label>
+        <label for="statusFilter" class="control-label">Status filter</label>
         <select 
           id="statusFilter" 
           class="form-control" 
@@ -83,7 +83,7 @@
 
       <div class="results" ng-repeat="thisTestPair in testPairs | filter : displayOnStatusFilter">
         <div class="flex-container">
-            <div class="filename">{{ thisTestPair.meta.fileName }}</div>
+            <div class="filename">{{ thisTestPair.fileName }}</div>
         </div>
         <div class="flex-container">
           <div>Reference</div>
@@ -93,13 +93,13 @@
         </div>
         <div class="flex-container">
           <div>
-            <img ng-src="{{ thisTestPair.a.src }}">
+            <img ng-src="{{ thisTestPair.referenceSrc.src }}">
           </div>
           <div>
-            <img ng-src="{{ thisTestPair.b.src }}">
+            <img ng-src="{{ thisTestPair.testSrc.src }}">
           </div>
           <div>
-            <img ng-src="{{ thisTestPair.c.src }}" image-name="c">
+            <img ng-src="{{ thisTestPair.diffSrc.src }}" image-name="c">
           </div>
           <div>
             <div class="statusInds">
@@ -116,7 +116,7 @@
                 <span>passed</span>
               </div>
             </div>
-            <div class="reportTxt">Threshold: {{ thisTestPair.meta.misMatchThreshold}}</div>
+            <div class="reportTxt">Threshold: {{ thisTestPair.misMatchThreshold}}</div>
             <div class="reportTxt">Report: {{ thisTestPair.report }}</div>
           </div>
         </div>
