@@ -26,7 +26,7 @@
           <span>Failed</span><strong class="red circle">{{testPairsCompleted-passedCount}}</strong>
         </div>
         <div class="stat">{{testPairsCompleted}} of {{testPairs.length}}</div>
-        <div class="stat">{{testDuration/1000 | number : 2}}s</div>
+        <div class="stat">{{testDuration/1000 | number : 2}} s</div>
         <div class="progressBarBlock" ng-if="testIsRunning">
           <div class="progress">
             <div 
@@ -44,27 +44,30 @@
       <table class="summaryList">
         <tr ng-repeat="thisTestPair in testPairs">
           <td class="statusInds">
+            
             <div class="indicator scanning" ng-if="thisTestPair.processing">
               <span class="dot yellow flash"></span>
               <span>scanning</span>
             </div>
+            
             <div class="indicator failed" ng-if="!thisTestPair.passed&&!thisTestPair.processing">
               <span class="dot red"></span>
               <span>failed</span>
             </div>
+            
             <div class="indicator passed" ng-if="thisTestPair.passed">
               <span class="dot green"></span>
               <span>passed</span>
             </div>
+          
           </td>
-          <td>
-            {{ thisTestPair.meta.label }} {{ thisTestPair.meta.selector }} 
+          
+          <td> 
             <span class="fileName">{{ thisTestPair.meta.fileName }}</span>
           </td>
         </tr>
       </table>
     </div>
-    <!-- end summaryBlock -->
 
     <div class="detailReport">
 
@@ -80,7 +83,6 @@
 
       <div class="results" ng-repeat="thisTestPair in testPairs | filter : displayOnStatusFilter">
         <div class="flex-container">
-            <div class="selector">{{ thisTestPair.meta.label }} {{ thisTestPair.meta.selector }}</div>
             <div class="filename">{{ thisTestPair.meta.fileName }}</div>
         </div>
         <div class="flex-container">
