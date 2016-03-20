@@ -62,7 +62,7 @@ compareApp.controller('MainCtrl', function ($scope, $route, $http) {
         console.log(data);
         data.testPairs.forEach(function (o, i, a){
           $scope.testPairs.push(
-            new testPair('../'+o.local_reference, '../'+o.local_test, null, o)
+            new testPair('../'+o.reference, '../'+o.test, null, o)
           );
         });
         $scope.compareTestPairs($scope.testPairs);
