@@ -56,8 +56,7 @@ compareApp.controller('MainCtrl', function ($scope, $route, $http) {
   });
 
   $scope.runFileConfig = function() {
-    $http.get('./config.json')
-    //$http.get('../getTestData')
+    $http.get('../getTestData')
       .success(function (data, status) {
         console.log(data);
         data.testPairs.forEach(function (o, i, a){

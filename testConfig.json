@@ -1,4 +1,43 @@
 {
-  "referenceDir": "/home/i/devel/ui-devel/ImageDiffTesterJS/bitmap_referrence",
-  "testDir": "/home/i/devel/ui-devel/ImageDiffTesterJS/bitmaps_test"
+  "testPairs": [{
+    "fileName": "0_0_header_0_phone.png",
+    "misMatchThreshold": 0.1,
+    "reference": "./bitmaps_reference/0_0_header_0_phone.png",
+    "test": "./bitmaps_test/0_0_header_0_phone.png"
+  }, {
+    "fileName": "0_1_main_0_phone.png",
+    "misMatchThreshold": 0.1,
+    "reference": "./bitmaps_reference/0_1_main_0_phone.png",
+    "test": "./bitmaps_test/0_1_main_0_phone.png"
+  }, {
+    "fileName": "0_2_bodybs-docs-featurettenth-of-type1_0_phone.png",
+    "misMatchThreshold": 0.1,
+    "reference": "./bitmaps_reference/0_2_bodybs-docs-featurettenth-of-type1_0_phone.png",
+    "test": "./bitmaps_test/0_2_bodybs-docs-featurettenth-of-type1_0_phone.png"
+  }, {
+    "fileName": "0_3_bodybs-docs-featurettenth-of-type2_0_phone.png",
+    "misMatchThreshold": 0.1,
+    "reference": "./bitmaps_reference/0_3_bodybs-docs-featurettenth-of-type2_0_phone.png",
+    "test": "./bitmaps_test/0_3_bodybs-docs-featurettenth-of-type2_0_phone.png"
+  }, {
+    "fileName": "0_4_footer_0_phone.png",
+    "misMatchThreshold": 0.1,
+    "reference": "./bitmaps_reference/0_4_footer_0_phone.png",
+    "test": "./bitmaps_test/0_4_footer_0_phone.png"
+  }, {
+    "fileName": "0_5_body_0_phone.png",
+    "misMatchThreshold": 0.1,
+    "reference": "./bitmaps_reference/0_5_body_0_phone.png",
+    "test": "./bitmaps_test/0_5_body_0_phone.png"
+  }, {
+    "fileName": "0_0_header_1_tablet_v.png",
+    "misMatchThreshold": 0.1,
+    "reference": "./bitmaps_reference/0_0_header_1_tablet_v.png",
+    "test": "./bitmaps_test/0_0_header_1_tablet_v.png"
+  }, {
+    "fileName": "0_1_main_1_tablet_v.png",
+    "misMatchThreshold": 0.1,
+    "reference": "./bitmaps_reference/0_1_main_1_tablet_v.png",
+    "test": "./bitmaps_test/0_1_main_1_tablet_v.png"
+  }]
 }
